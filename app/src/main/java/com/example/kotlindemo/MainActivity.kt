@@ -3,8 +3,14 @@ package com.example.kotlindemo
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import android.widget.FrameLayout
+import android.widget.Switch
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.kotlindemo.fragment.HomePageFragment
+import com.example.kotlindemo.fragment.MessagePageFragmnet
+import com.example.kotlindemo.fragment.RecommendPageFragment
+import com.example.kotlindemo.fragment.SettingPageFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 /**
  * @author TomCan
@@ -13,6 +19,8 @@ import androidx.appcompat.app.AppCompatActivity
  */
 
 class MainActivity : AppCompatActivity() {
+
+    private val TAG = "MainActivity"
 
     /**
      * 声明一个可变变量,该变量不可变，不支持重新赋值
@@ -32,16 +40,82 @@ class MainActivity : AppCompatActivity() {
     val gender = "女"
 
     /**
-     *  通过对类型后面家？，可对声明的变量赋值为 null
+     *  通过对类型后面加？，可对声明的变量赋值为 null
      */
     var school: String? = null
 
+    lateinit var bottomNavigation: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(
+            if (MyApplication.isDayNight) {
+                R.style.AppTheme_Custom
+            } else {
+                R.style.AppTheme_NoActionBar
+            }
+        )
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main)
         val btClick = findViewById<Button>(R.id.bt_click)
         btClick.setOnClickListener { }
+        findViewById<Switch>(R.id.sw_daynight).setOnCheckedChangeListener { compoundButton, b ->
+            if (MyApplication.isDayNight == b) return@setOnCheckedChangeListener
+            MyApplication.isDayNight = b
+            recreate()
+        }
+
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fl_container, HomePageFragment()).commit()
+
+        bottomNavigation = findViewById(R.id.bottom_navigation)
+        bottomNavigation.setOnNavigationItemReselectedListener {
+            Log.e(TAG, "".plus(it.groupId).plus("---").plus(it.itemId))
+            Toast.makeText(
+                this,
+                "".plus(it.groupId).plus("---").plus(it.itemId),
+                Toast.LENGTH_SHORT
+            )
+        }
+        bottomNavigation.setOnNavigationItemSelectedListener {
+
+            Toast.makeText(
+                this,
+                it.title,
+                Toast.LENGTH_SHORT
+            )
+
+            when (it.itemId) {
+                R.id.item_home -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fl_container, HomePageFragment()).commit()
+                    true
+                }
+
+                R.id.item_massage -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fl_container, MessagePageFragmnet(it.title.toString())).commit()
+                    true
+                }
+
+                R.id.item_applet -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fl_container, RecommendPageFragment()).commit()
+                    true
+                }
+
+
+                R.id.item_person -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fl_container, SettingPageFragment()).commit()
+                    true
+                }
+
+
+                else -> true
+            }
+        }
 
 
         /**
@@ -93,8 +167,6 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-
-
         // 调用函数
         val description1 = getDescription()
         Log.e("tom", "王菲的身份:$description1")
@@ -124,10 +196,6 @@ class MainActivity : AppCompatActivity() {
         val personName2 = getPerson2Name()
         Log.e("tom", "personName2:$personName2")
 
-
-        val flContainer = findViewById<FrameLayout>(R.id.fl_container)
-        val myFragment = MyFragment()
-        supportFragmentManager.beginTransaction().add(R.id.fl_container, myFragment).commit()
 
     }
 
@@ -295,10 +363,11 @@ class MainActivity : AppCompatActivity() {
 
 
     fun getLock() {
-
         var person = person3(22)
-
     }
 
 
 }
+
+
+

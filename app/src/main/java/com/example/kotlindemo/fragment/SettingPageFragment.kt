@@ -1,20 +1,26 @@
-package com.example.kotlindemo
+package com.example.kotlindemo.fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.CompoundButton
+import android.widget.Switch
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.kotlindemo.MyApplication
+import com.example.kotlindemo.R
 
 /**
  * @author TomCan
  * @description:
  * @date:2021/11/19 16:16
  */
-class MyFragment : Fragment() {
+class SettingPageFragment : Fragment(), CompoundButton.OnCheckedChangeListener {
     private lateinit var btClick: Button
+    private lateinit var swDaynight: Switch
 
 
     override fun onCreateView(
@@ -22,15 +28,17 @@ class MyFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return View.inflate(context, R.layout.fragment_myfragment, null)
+        return View.inflate(context, R.layout.fragment_setting_page, null)
     }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         btClick = view.findViewById(R.id.bt_click)
+        swDaynight = view.findViewById(R.id.sw_daynight)
         btClick.setOnClickListener {
             val person = Person()
+
             person.name.trim()
             person.description = "王菲是亚洲天后~~~" // 声明Person类对象后，才对description变量进行赋值操作
             /**
@@ -50,7 +58,6 @@ class MyFragment : Fragment() {
              * 如果 name 为 null，则 name?.trim() 的结果为 null。这意味着，在执行此语句时，您的应用永远不会抛出 NullPointerException。
              */
             var content = person.description?.trim()
-
             Toast.makeText(context, content, Toast.LENGTH_LONG).show()
         }
 
@@ -60,8 +67,18 @@ class MyFragment : Fragment() {
             10 -> return
         }
 
+//        swDaynight.setOnCheckedChangeListener(this)
 
+        swDaynight.setOnCheckedChangeListener { compoundButton, b ->
+            Log.e("wyc", "onCheckedChanged:" + b)
+            if (b == MyApplication.isDayNight) return@setOnCheckedChangeListener
+            MyApplication.isDayNight = b
+            Log.e("wyc", MyApplication.isDayNight.toString())
+//            activity!!.supportFragmentManager.popBackStack()
+            activity!!.recreate()
+            Log.e("wyc2", MyApplication.isDayNight.toString())
 
+        }
 
     }
 
@@ -76,6 +93,16 @@ class MyFragment : Fragment() {
             age = 12
             description = null // 赋值为null
         }
+    }
+
+    override fun onCheckedChanged(p0: CompoundButton?, p1: Boolean) {
+        Log.e("wyc", "onCheckedChanged:" + p1)
+        if (p1 == MyApplication.isDayNight) return
+        MyApplication.isDayNight = p1
+        Log.e("wyc", MyApplication.isDayNight.toString())
+        activity!!.recreate()
+        activity!!.supportFragmentManager.popBackStack()
+        Log.e("wyc2", MyApplication.isDayNight.toString())
     }
 
 }

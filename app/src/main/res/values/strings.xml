@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">KotlinDemo</string>
+    <string name="item_home_name">home</string>
+    <string name="item_message">message</string>
+    <string name="item_applet">applet</string>
+    <string name="item_person">person</string>
 </resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model-group>
+
+    <model
+        id="1"
+        name="搜索"
+        class="com.starmap.app.model.search.SearchModel"
+        enable="true" >
+    </model>
+
+    <model
+        id="2"
+        name="周边"
+        class="com.starmap.app.model.surround.SurroundModel"
+        enable="true" >
+    </model>
+
+    <model
+        id="3"
+        name="专题信息"
+        class="com.dtt.monographicinfo.model.MonographicInfoModel"
+        enable="true" >
+    </model>
+
+    <model
+        id="4"
+        name="轨迹导航"
+        class="com.starmap.app.model.navigation.NavigationModel"
+        enable="true" >
+    </model>
+
+    <model
+        id="5"
+        name="全球轨迹导航"
+        class="com.mapscloud.navigation.OsmNavigationModel"
+        enable="true" >
+    </model>
+
+</model-group>

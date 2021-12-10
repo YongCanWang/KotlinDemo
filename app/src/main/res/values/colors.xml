@@ -7,4 +7,135 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+
+
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+
+    <!-- EditText光标颜色随此颜色 -->
+    <color name="colorAccent">#FDDA34</color>
+    <color name="colorPink">#FFB6CF</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+
+    <!--首页-->
+    <color name="pop_layer">#666</color>
+    <color name="home_title_search_bg">#AAAAAA</color>
+    <color name="home_bg_color">#f4f4f4</color>
+    <color name="home_compare_txt_color">#1E1D1D</color>
+    <color name="common_search_txt_color">#A2A2A2</color>
+    <color name="common_search_bg_color">#E6E6E6</color>
+    <color name="home_tabselected_txt_color">#333333</color>
+    <color name="home_tab_txt_color">#666666</color>
+    <color name="home_tab_indicator_color">#FDDA34</color>
+    <color name="home_subtab_selected_bg_color">#FDDA34</color>
+    <color name="home_subtab_nomal_bg_color">#F7F7F7</color>
+    <color name="home_subtabselected_txt_color">#333333</color>
+    <color name="home_subtab_txt_color">#888888</color>
+    <color name="home_time_txt_color">#999999</color>
+    <color name="home_add_compare_txt_color">#dd007EFF</color>
+    <color name="home_to_top_txt_color">#FF6A6A</color>
+    <color name="home_to_top_div_color">#EEEEEE</color>
+    <color name="pop_rcly_bg_color">#f9f9f9</color>
+    <color name="pop_compare_start_press_color">#FDC734</color>
+    <color name="pop_compare_start_nomal_color">#DDDDDD</color>
+    <color name="btnavigation_color_nomal">#454545</color>
+    <color name="btnavigation_color_checked">#FFDA40</color>
+
+    <!--搜索页面-->
+    <color name="ac_search_txt_color">#007EFF</color>
+
+    <!-- 详细地图页面 -->
+    <color name="ov_thememap_more_bf_color">#DFEFFF</color>
+    <color name="ov_thememap_more_txt_color">#007EFF</color>
+    <color name="ov_thememap_drawer_scrim_color">#5C000000</color>
+
+    <!-- 评论页面输入框 -->
+    <color name="dialog_comment_bot_bg_color">#F9FBFC</color>
+    <color name="dialog_comment_username_color">#4489D0</color>
+
+    <!-- 更多页面 -->
+    <color name="dialog_more_metadata_txt_color">#777777</color>
+    <color name="dialog_more_metadata_bg_color">#FCFCFC</color>
+
+    <!-- 专题图目录页面 -->
+    <color name="slv_category_txt_bg_color">#F9FBFC</color>
+    <color name="slv_category_selected_bg_color">#fff4d6</color>
+    <color name="theme_titlebar_bg">#F2F2F2</color>
+
+    <!-- rcly加载页面 -->
+    <color name="rcly_net_load_txt_color">#ACB1B3</color>
+    <color name="rcly_net_load_subtxt_color">#ACB1B3</color>
+    <color name="rcly_net_load_checknet_txt_color">#4EA5D7</color>
+
+    <color name="touming">#00000000</color>
+    <color name="color_gray">#f0f0f4</color>
+
+    <color name="azimuth_titlebar_bg">#FAFAFA</color>
+
+    <!-- 透明蓝色 -->
+    <color name="coord_trans_check_color">#15007EFF</color>
+
+    <color name="c333333_color">#333333</color>
+
+    <color name="c007eff_color">#007EFF</color>
+
+    <color name="c75a1f8_color">#75A1F8</color>
+    <color name="cf3b56f_color">#F3B56F</color>
+    <color name="cd69de9_color">#D69DE9</color>
+    <color name="c45c3ae_color">#45C3AE</color>
+    <color name="c75bcf8_color">#75BCF8</color>
+    <color name="ce6897e_color">#E6897E</color>
+    <color name="cf7f7f7_color">#F7F7F7</color>
+    <color name="ceeeeee_color">#EEEEEE</color>
+    <color name="c999999_color">#999999</color>
+
+    <color name="line_color">#007EFF</color>
+    <color name="polygon_color">#5545C3AE</color>
+
+    <color name="font_color_gray_333333">#333333</color>
+
+    <color name="form_title_bottom_div_bg">#f4f4f4</color>
+
+    <color name="font_color_black_666666">#666666</color>
+
+    <color name="list_item_title">#333333</color>
+    <color name="list_item_desc">#666666</color>
+    <color name="list_divide_line">#E1E1E1</color>
+    <color name="list_bg">#F6F6F6</color>
+
+    <color name="layout_title">#008EEF</color>
+    <color name="light_gray">#F8F8F8</color>
+    <color name="cancel_bg">#F4F4F4</color>
+    <!-- 对话框标题颜色 -->
+    <color name="dialog_title">#323232</color>
+    <color name="sure_bg">#0084FE</color>
+
+    <color name="cE5E5E5_color">#E5E5E5</color>
+
+
+    <color name="sunflower_black">#de000000</color>
+    <color name="sunflower_gray_50">#fafafa</color>
+    <color name="sunflower_gray_50_a600">#99fafafa</color>
+    <color name="sunflower_green_300">#6dc790</color>
+    <color name="sunflower_green_500">#49bb79</color>
+    <color name="sunflower_green_700">#005d2b</color>
+    <color name="sunflower_green_900">#1a231e</color>
+    <color name="sunflower_white">#deffffff</color>
+    <color name="sunflower_yellow_300">#f8f99f</color>
+    <color name="sunflower_yellow_500">#ffff63</color>
+
+
+    <color name="primary">#6002ee</color>
+    <color name="primaryDark">#5002c7</color>
+    <color name="accent">#9c47ff</color>
+
+    <color name="primary_custom">#607D8B</color>
+    <color name="primaryDark_custom">#546E7A</color>
+    <color name="accent_custom">#388E3C</color>
+    <color name="primary_custom_translucent">#40388E3C</color>
+
+
 </resources>

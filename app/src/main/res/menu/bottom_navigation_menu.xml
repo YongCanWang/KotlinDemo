@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_home"
+        android:enabled="true"
+        android:icon="@mipmap/fg_home_icon_s"
+        android:title="@string/item_home_name"/>
+
+    <item
+        android:id="@+id/item_massage"
+        android:enabled="true"
+        android:icon="@mipmap/fg_explore_icon_s"
+        android:title="@string/item_message"/>
+
+    <item
+        android:id="@+id/item_applet"
+        android:enabled="true"
+        android:icon="@mipmap/icon_applet_s"
+        android:title="@string/item_applet"/>
+
+    <item
+        android:id="@+id/item_person"
+        android:enabled="true"
+        android:icon="@mipmap/fg_person_icon_s"
+        android:title="@string/item_person"/>
+
+</menu>

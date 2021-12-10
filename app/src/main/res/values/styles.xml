@@ -1,0 +1,205 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="main_diliver_sytle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#DDDDDD</item>
+        <item name="android:layout_marginLeft">6dp</item>
+        <item name="android:layout_marginRight">6dp</item>
+    </style>
+
+
+    <!-- app默认样式 -->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:background">#00000000</item>
+    </style>
+
+
+    <!-- 有启动页背景的启动样式，用于解决app启动白屏问题-->
+    <style name="LaunchTheme" parent="AppTheme.NoActionBar">
+        <item name="android:background">@mipmap/ic_launcher</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+    <style name="Theme.Sunflower" parent="Base.Theme.Sunflower" />
+
+    <!--google Sunflower app theme-->
+    <style name="Base.Theme.Sunflower" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/sunflower_green_500</item>
+        <item name="colorOnPrimary">@color/sunflower_yellow_500</item>
+        <item name="colorPrimaryDark">@color/sunflower_green_700</item>
+        <item name="colorOnSurface">@color/sunflower_black</item>
+        <item name="colorAccent">@color/sunflower_green_700</item>
+        <item name="colorSurface">@color/sunflower_gray_50</item>
+        <item name="colorSecondary">@color/sunflower_yellow_500</item>
+        <item name="android:colorBackground">@color/sunflower_green_500</item>
+    </style>
+
+
+    <!--绿色主题 继承自AppCompat-->
+    <style name="AppAppCompatStyleTheme" parent="Theme.AppCompat.DayNight">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/sunflower_green_500</item>
+        <item name="colorOnPrimary">@color/sunflower_yellow_500</item>
+        <item name="colorPrimaryDark">@color/sunflower_green_700</item>
+        <item name="colorOnSurface">@color/sunflower_black</item>
+        <item name="colorAccent">@color/sunflower_green_700</item>
+        <item name="colorSurface">@color/sunflower_gray_50</item>
+        <item name="colorSecondary">@color/sunflower_yellow_500</item>
+        <item name="android:colorBackground">@color/sunflower_green_500</item>
+    </style>
+
+    <!--All绿色主题 继承自MaterialComponents-->
+    <style name="AppMelanocraticStyleTheme" parent="Theme.MaterialComponents.DayNight">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:colorBackground">@color/sunflower_green_500</item>
+        <item name="colorOnBackground">@color/sunflower_green_500</item>
+        <item name="colorSurface">@color/sunflower_green_500</item>
+        <item name="colorOnSurface">@color/sunflower_green_500</item>
+        <item name="colorError">@color/sunflower_green_500</item>
+        <item name="colorOnError">@color/sunflower_green_500</item>
+    </style>
+
+
+    <!--高亮模式 继承自MaterialComponents-->
+    <style name="AppTheme.Light" parent="ThemeParent">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <item name="colorAccent">@color/accent</item>
+    </style>
+
+
+    <!--黑暗模式 继承自MaterialComponents-->
+    <style name="AppTheme.Dark" parent="ThemeParent.Dark">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="md_button_casing">literal</item>
+    </style>
+
+
+    <!--暗色模式（自定义样式） 继承自MaterialComponents-->
+    <style name="AppTheme.Custom" parent="ThemeParent.Dark">
+        <item name="colorPrimary">@color/primary_custom</item>
+        <item name="colorPrimaryDark">@color/primaryDark_custom</item>
+        <item name="colorAccent">@color/accent_custom</item>
+
+        <!-- Dialog Theming attributes -->
+        <item name="md_corner_radius">16dp</item>
+        <item name="md_font_title">@font/raleway_bold</item>
+        <item name="md_font_body">@font/raleway_medium</item>
+        <item name="md_font_button">@font/raleway_semibold</item>
+        <item name="md_ripple_color">@color/primary_custom_translucent</item>
+
+
+
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="sample_button_color">#424242</item>
+        <item name="md_background_color">#212121</item>
+
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <!-- LoadingDialog的提示框样式 -->
+    <style name="LodingDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <style name="homepage_weather_left_ditu_image">
+        <item name="android:layout_width">64dp</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <declare-styleable name="GridRadioGroup">
+        <attr name="numColumns" format="integer" />
+        <attr name="horizontalSpacing" format="dimension" />
+        <attr name="verticalSpacing" format="dimension" />
+    </declare-styleable>
+
+
+    <style name="TranslucentTheme" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFrame">@null</item>
+    </style>
+
+    <style name="NavCommonListItemTipsText">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#999999</item>
+    </style>
+
+
+    <style name="DialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="dialog_parent" parent="@android:style/Theme.Dialog">
+        <!--  设置背景透明-->
+        <!--<item name="android:windowBackground">@color/transparent</item>-->
+        <!--&lt;!&ndash;设置是否有边框&ndash;&gt;-->
+        <!--<item name="android:windowFrame">@null</item>-->
+        <!-- 设置是否有遮盖-->
+        <!--<item name="android:windowContentOverlay">@null</item>-->
+        <!--&lt;!&ndash; 设置是否浮在activity之上&ndash;&gt;-->
+        <!--<item name="android:windowIsFloating">true</item>-->
+        <!--&lt;!&ndash;设置dialog的背景，（#00000000）&ndash;&gt;-->
+        <!--<item name="android:background">@color/transparent</item>-->
+
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+        <item name="android:backgroundDimEnabled">true</item><!--模糊-->
+
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+    </style>
+
+
+    <!-- Dialog样式-->
+    <style name="DialogTheme" parent="@android:style/Theme.Dialog">
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 遮罩层 -->
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+
+
+</resources>

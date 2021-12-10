@@ -3,8 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/project/kotlindemo/app/src/main/res/layout/activity_main.xml" value="0.37907608695652173" />
+        <entry key="..\:/project/kotlindemo/app/src/main/res/drawable/bottom_nav_applet_selector.xml" value="0.41470888661899896" />
+        <entry key="..\:/project/kotlindemo/app/src/main/res/drawable/ic_launcher_background.xml" value="0.40625" />
+        <entry key="..\:/project/kotlindemo/app/src/main/res/layout/activity_main.xml" value="0.2857142857142857" />
+        <entry key="..\:/project/kotlindemo/app/src/main/res/layout/fragment_home_page.xml" value="0.10285714285714286" />
+        <entry key="..\:/project/kotlindemo/app/src/main/res/layout/fragment_home_page2.xml" value="0.18857142857142858" />
+        <entry key="..\:/project/kotlindemo/app/src/main/res/layout/fragment_message_page.xml" value="0.10285714285714286" />
         <entry key="..\:/project/kotlindemo/app/src/main/res/layout/fragment_myfragment.xml" value="0.39114583333333336" />
+        <entry key="..\:/project/kotlindemo/app/src/main/res/layout/fragment_page.xml" value="0.1950050454086781" />
+        <entry key="..\:/project/kotlindemo/app/src/main/res/layout/fragment_recommend_page.xml" value="0.39855072463768115" />
+        <entry key="..\:/project/kotlindemo/app/src/main/res/layout/fragment_setting_page.xml" value="0.38179347826086957" />
+        <entry key="..\:/project/kotlindemo/app/src/main/res/layout/fragment_tab.xml" value="0.39855072463768115" />
+        <entry key="..\:/project/kotlindemo/app/src/main/res/layout/fragment_tab2.xml" value="0.38768115942028986" />
+        <entry key="..\:/project/kotlindemo/app/src/main/res/layout/item_simplenessrecycler.xml" value="0.39266304347826086" />
+        <entry key="..\:/project/kotlindemo/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.40260416666666665" />
       </map>
     </option>
   </component>

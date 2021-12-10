@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello Kotlin" />
+
+    <Button
+        android:layout_margin="20dp"
+        android:id="@+id/bt_click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击我" />
+
+
+    <Switch
+        android:id="@+id/sw_daynight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="深色模式" />
+
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:text="深色模式"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp" />
+
+</LinearLayout>
