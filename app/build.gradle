@@ -20,6 +20,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
         }
     }
     compileOptions {
@@ -51,7 +52,9 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
+    api 'androidx.fragment:fragment-ktx:1.3.0'
+    api 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    api 'androidx.navigation:navigation-ui-ktx:2.3.5'
 
 //    implementation("androidx.datastore:datastore:1.0.0")
 //    // optional - RxJava2 support

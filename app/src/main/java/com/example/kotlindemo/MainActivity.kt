@@ -10,6 +10,7 @@ import com.example.kotlindemo.fragment.HomePageFragment
 import com.example.kotlindemo.fragment.MessagePageFragmnet
 import com.example.kotlindemo.fragment.RecommendPageFragment
 import com.example.kotlindemo.fragment.SettingPageFragment
+import com.example.kotlindemo.utils.ThemeManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 /**
@@ -18,7 +19,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
  * @date :2021/11/18 16:27
  */
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), ThemeManager.OnThemeChangedListener {
 
     private val TAG = "MainActivity"
 
@@ -55,8 +56,8 @@ class MainActivity : AppCompatActivity() {
             }
         )
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_main)
+        ThemeManager.getInstance().registerOnThemeChangedListener(this)
         val btClick = findViewById<Button>(R.id.bt_click)
         btClick.setOnClickListener { }
         findViewById<Switch>(R.id.sw_daynight).setOnCheckedChangeListener { compoundButton, b ->
@@ -215,7 +216,7 @@ class MainActivity : AppCompatActivity() {
         } else {
             "王菲是我的朋友喔~"
         }
-        return description;
+        return description
     }
 
 
@@ -364,6 +365,10 @@ class MainActivity : AppCompatActivity() {
 
     fun getLock() {
         var person = person3(22)
+    }
+
+    override fun onThemeChanged(event: ThemeManager.OnThemeChangedEvent?) {
+
     }
 
 

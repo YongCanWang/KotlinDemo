@@ -9,9 +9,11 @@ import android.widget.Button
 import android.widget.CompoundButton
 import android.widget.Switch
 import android.widget.Toast
+import androidx.appcompat.widget.SwitchCompat
 import androidx.fragment.app.Fragment
 import com.example.kotlindemo.MyApplication
 import com.example.kotlindemo.R
+import com.example.kotlindemo.utils.ThemeManager
 
 /**
  * @author TomCan
@@ -36,6 +38,9 @@ class SettingPageFragment : Fragment(), CompoundButton.OnCheckedChangeListener {
         super.onViewCreated(view, savedInstanceState)
         btClick = view.findViewById(R.id.bt_click)
         swDaynight = view.findViewById(R.id.sw_daynight)
+        var scDaynight = view.findViewById<SwitchCompat>(R.id.sc_daynight)
+
+
         btClick.setOnClickListener {
             val person = Person()
 
@@ -67,19 +72,19 @@ class SettingPageFragment : Fragment(), CompoundButton.OnCheckedChangeListener {
             10 -> return
         }
 
-//        swDaynight.setOnCheckedChangeListener(this)
 
         swDaynight.setOnCheckedChangeListener { compoundButton, b ->
-            Log.e("wyc", "onCheckedChanged:" + b)
             if (b == MyApplication.isDayNight) return@setOnCheckedChangeListener
             MyApplication.isDayNight = b
-            Log.e("wyc", MyApplication.isDayNight.toString())
-//            activity!!.supportFragmentManager.popBackStack()
             activity!!.recreate()
-            Log.e("wyc2", MyApplication.isDayNight.toString())
-
         }
 
+
+        scDaynight.setOnCheckedChangeListener { compoundButton, b ->
+            val theme =
+                (ThemeManager.getInstance().currentTheme + 1) % ThemeManager.getInstance().themeCount
+            ThemeManager.getInstance().setCurrentTheme(theme)
+        }
     }
 
 
